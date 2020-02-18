@@ -81,6 +81,11 @@ function writeFileManager() {
       <title>Main</title>
     </head>
     <body>
+    
+        <div class="row">
+
+            <div class="col-md-8" id="header"><h1> My Team</h1> </div>
+        </div>
           <div class="container">
               <h2 class="display-4">${manager01.managerName}</h2>
               <h2>Manager</h2>
