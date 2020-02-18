@@ -86,11 +86,11 @@ function writeFileManager() {
     </head>
     <body>
           <div class="container">
-              <h1 class="display-4">Hi! My name is ${manager01.managerName}</h1>
+              <h2 class="display-4">${manager01.managerName}</h2>
+              <h2>Manager</h2>
               <p class="lead">Id:${manager01.managerId}.</p>
-              <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
               <ul class="list-group">
-                  <li class="list-group-item">My email is ${manager01.managerEmail}</li>
+                  <li class="list-group-item">Email: ${manager01.managerEmail}</li>
                   <li class="list-group-item">Office: ${manager01.managerOffice}</li>
               </ul>
           </div>` , function (err) {
@@ -106,11 +106,11 @@ function writeFileEngineer() {
     fs.appendFile("main.html", `
     
           <div class="container">
-              <h1 class="display-4">Hi! My name is ${engineer.engineerName}</h1>
+              <h2 class="display-4">${engineer.engineerName}</h2>
+              <h2>Engineer</h2>
               <p class="lead">Id:${engineer.engineerId}.</p>
-              <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
               <ul class="list-group">
-                  <li class="list-group-item">My email is ${engineer.engineerEmail}</li>
+                  <li class="list-group-item">Email: ${engineer.engineerEmail}</li>
                   <li class="list-group-item">Office: ${engineer.engineerOffice}</li>
               </ul>
           </div>` , function (err) {
@@ -125,11 +125,11 @@ function writeFileIntern() {
     fs.appendFile("main.html", `
     
     <div class="container">
-        <h1 class="display-4">Hi! My name is ${intern.internName}</h1>
+        <h2 class="display-4">${intern.internName}</h2>
+        <h2>Intern</h2>
         <p class="lead">Id:${intern.internId}.</p>
-        <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
         <ul class="list-group">
-            <li class="list-group-item">My email is ${intern.internEmail}</li>
+            <li class="list-group-item">Email: ${intern.internEmail}</li>
             <li class="list-group-item">Office: ${intern.internOffice}</li>
         </ul>
     </div>` , function (err) {
