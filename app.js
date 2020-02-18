@@ -40,23 +40,19 @@ function appMenu() {
             {
                 type: "input",
                 name: "nextMemberType",
-                message: "What type of member would you like to add?"
+                message: "What type of member would you like to add? (if done, press Enter)"
             }
         ])
             .then(function (answers) {
                 const managerObject = answers;
-                console.log(managerObject);
                 //testing constructor here below..
                 manager01 = new Manager(managerObject.managerName, managerObject.managerId, managerObject.managerEmail, managerObject.managerOffice)
-                console.log("manager01 :" + `email: ${manager01.managerEmail}, office number: ${manager01.managerOffice}`) //to see an example
                 writeFileManager();
                 if (answers.nextMemberType === "engineer") {
-                    console.log("chose engineer")
                     createEngineer();
 
                 }
                 else if (answers.nextMemberType === "intern") {
-                    console.log("chose intern")
                     createIntern();
                 }
 
@@ -82,7 +78,7 @@ function writeFileManager() {
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-      <title>Document</title>
+      <title>Main</title>
     </head>
     <body>
           <div class="container">
@@ -179,21 +175,18 @@ function createEngineer() {
         {
             type: "input",
             name: "memberType",
-            message: "What type of member would you like to add?"
+            message: "What type of member would you like to add? (if done, press Enter)"
         }
     ])
         .then(function (answers) {
             const engineerObject = answers;
-            console.log(engineerObject);
             //testing constructor here below..
             engineer = new Engineer(engineerObject.engineerName, engineerObject.engineerId, engineerObject.engineerEmail, engineerObject.engineerOffice)
             writeFileEngineer();
             if (answers.memberType === "engineer") {
-                console.log("chose engineer")
                 createEngineer();
             }
             else if (answers.memberType === "intern") {
-                console.log("chose intern")
                 createIntern();
             }
             else {
@@ -231,21 +224,18 @@ function createIntern() {
         {
             type: "input",
             name: "memberType",
-            message: "What type of member would you like to add?"
+            message: "What type of member would you like to add? (if done, press Enter)"
         }
     ])
         .then(function (answers) {
             const internObject = answers;
-            console.log(internObject);
             //testing constructor here below..
             intern = new Intern(internObject.internName, internObject.internId, internObject.internEmail, internObject.internOffice)
             writeFileIntern();
             if (answers.memberType === "engineer") {
-                console.log("chose engineer")
                 createEngineer();
             }
             else if (answers.memberType === "intern") {
-                console.log("chose intern")
                 createIntern();
             }
             else {
@@ -257,7 +247,5 @@ function createIntern() {
         });
 }
 
-// collect data from user with inq
 
-// use fs to write a html document
 
