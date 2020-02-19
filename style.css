@@ -1,0 +1,12 @@
+.container {
+    background-color: lightskyblue;
+    width: 300px;
+    padding-bottom: 30px;
+}
+
+.list-group-item {}
+
+#header {
+    margin: 0 auto;
+    text-align: center;
+}

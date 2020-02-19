@@ -79,6 +79,7 @@ function writeFileManager() {
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
       <title>Main</title>
+      <link href="style.css" rel="stylesheet">
     </head>
     <body>
     
@@ -91,9 +92,12 @@ function writeFileManager() {
               <h2>Manager</h2>
               <p class="lead">Id:${manager01.managerId}.</p>
               <ul class="list-group">
-                  <li class="list-group-item">Email: ${manager01.managerEmail}</li>
-                  <li class="list-group-item">Office: ${manager01.managerOffice}</li>
+                  <li class="list-group-item" width="300px">Email: ${manager01.managerEmail}</li>
+                  <li class="list-group-item" width="300px">Office: ${manager01.managerOffice}</li>
               </ul>
+          </div>
+          <div class="row">
+          <p></p>
           </div>` , function (err) {
         if (err) {
             return console.log(err);
@@ -114,6 +118,9 @@ function writeFileEngineer() {
                   <li class="list-group-item">Email: ${engineer.engineerEmail}</li>
                   <li class="list-group-item">Office: ${engineer.engineerOffice}</li>
               </ul>
+          </div>
+          <div class="row">
+          <p></p>
           </div>` , function (err) {
         if (err) {
             return console.log(err);
@@ -133,7 +140,10 @@ function writeFileIntern() {
             <li class="list-group-item">Email: ${intern.internEmail}</li>
             <li class="list-group-item">Office: ${intern.internOffice}</li>
         </ul>
-    </div>` , function (err) {
+    </div>
+    <div class="row">
+          <p></p>
+          </div>` , function (err) {
         if (err) {
             return console.log(err);
         }

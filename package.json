@@ -1,0 +1,30 @@
+{
+  "name": "javascript_profile_generator",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "inquirer": "^7.0.4"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  },
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adriansap/javascript_profile_generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adriansap/javascript_profile_generator/issues"
+  },
+  "homepage": "https://github.com/adriansap/javascript_profile_generator#readme"
+}
