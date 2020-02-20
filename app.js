@@ -139,7 +139,6 @@ function writeFileIntern() {
         <p class="lead">Id:${intern.id}.</p>
         <ul class="list-group">
             <li class="list-group-item">Email: ${intern.email}</li>
-            <li class="list-group-item">Office: ${intern.office}</li>
             <li class="list-group-item">School: ${intern.school}</li>
         </ul>
     </div>
@@ -241,11 +240,6 @@ function createIntern() {
         },
         {
             type: "input",
-            name: "internOffice",
-            message: "What's the office number?"
-        },
-        {
-            type: "input",
             name: "internSchool",
             message: "What's the intern's school?"
         },
@@ -258,7 +252,7 @@ function createIntern() {
         .then(function (answers) {
             const internObject = answers;
             //testing constructor here below..
-            intern = new Intern(internObject.internName, internObject.internId, internObject.internEmail, internObject.internOffice, internObject.internSchool)
+            intern = new Intern(internObject.internName, internObject.internId, internObject.internEmail, internObject.internSchool)
             writeFileIntern();
             if (answers.memberType === "engineer") {
                 createEngineer();
