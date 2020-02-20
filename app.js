@@ -88,12 +88,12 @@ function writeFileManager() {
             <div class="col-md-8" id="header"><h1> My Team</h1> </div>
         </div>
           <div class="container">
-              <h2 class="display-4">${manager01.managerName}</h2>
+              <h2 class="display-4">${manager01.name}</h2>
               <h2>Manager</h2>
-              <p class="lead">Id:${manager01.managerId}.</p>
+              <p class="lead">Id:${manager01.id}.</p>
               <ul class="list-group">
-                  <li class="list-group-item" width="300px">Email: ${manager01.managerEmail}</li>
-                  <li class="list-group-item" width="300px">Office: ${manager01.managerOffice}</li>
+                  <li class="list-group-item" width="300px">Email: ${manager01.email}</li>
+                  <li class="list-group-item" width="300px">Office: ${manager01.office}</li>
               </ul>
           </div>
           <div class="row">
@@ -111,12 +111,13 @@ function writeFileEngineer() {
     fs.appendFile("main.html", `
     
           <div class="container">
-              <h2 class="display-4">${engineer.engineerName}</h2>
+              <h2 class="display-4">${engineer.name}</h2>
               <h2>Engineer</h2>
-              <p class="lead">Id:${engineer.engineerId}.</p>
+              <p class="lead">Id:${engineer.id}.</p>
               <ul class="list-group">
-                  <li class="list-group-item">Email: ${engineer.engineerEmail}</li>
-                  <li class="list-group-item">Office: ${engineer.engineerOffice}</li>
+                  <li class="list-group-item">Email: ${engineer.email}</li>
+                  <li class="list-group-item">Office: ${engineer.office}</li>
+                  <li class="list-group-item">GitHub: ${engineer.github}</li>
               </ul>
           </div>
           <div class="row">
@@ -133,12 +134,13 @@ function writeFileIntern() {
     fs.appendFile("main.html", `
     
     <div class="container">
-        <h2 class="display-4">${intern.internName}</h2>
+        <h2 class="display-4">${intern.name}</h2>
         <h2>Intern</h2>
-        <p class="lead">Id:${intern.internId}.</p>
+        <p class="lead">Id:${intern.id}.</p>
         <ul class="list-group">
-            <li class="list-group-item">Email: ${intern.internEmail}</li>
-            <li class="list-group-item">Office: ${intern.internOffice}</li>
+            <li class="list-group-item">Email: ${intern.email}</li>
+            <li class="list-group-item">Office: ${intern.office}</li>
+            <li class="list-group-item">School: ${intern.school}</li>
         </ul>
     </div>
     <div class="row">
@@ -189,6 +191,11 @@ function createEngineer() {
         },
         {
             type: "input",
+            name: "engineerGithub",
+            message: "What's the person's github username?"
+        },
+        {
+            type: "input",
             name: "memberType",
             message: "What type of member would you like to add? (if done, press Enter)"
         }
@@ -196,7 +203,9 @@ function createEngineer() {
         .then(function (answers) {
             const engineerObject = answers;
             //testing constructor here below..
-            engineer = new Engineer(engineerObject.engineerName, engineerObject.engineerId, engineerObject.engineerEmail, engineerObject.engineerOffice)
+            engineer = new Engineer(engineerObject.engineerName, engineerObject.engineerId, engineerObject.engineerEmail, engineerObject.engineerOffice, engineerObject.engineerGithub)
+            console.log(engineerObject.engineerGithub)
+
             writeFileEngineer();
             if (answers.memberType === "engineer") {
                 createEngineer();
@@ -238,6 +247,11 @@ function createIntern() {
         },
         {
             type: "input",
+            name: "internSchool",
+            message: "What's the intern's school?"
+        },
+        {
+            type: "input",
             name: "memberType",
             message: "What type of member would you like to add? (if done, press Enter)"
         }
@@ -245,7 +259,7 @@ function createIntern() {
         .then(function (answers) {
             const internObject = answers;
             //testing constructor here below..
-            intern = new Intern(internObject.internName, internObject.internId, internObject.internEmail, internObject.internOffice)
+            intern = new Intern(internObject.internName, internObject.internId, internObject.internEmail, internObject.internOffice, internObject.internSchool)
             writeFileIntern();
             if (answers.memberType === "engineer") {
                 createEngineer();

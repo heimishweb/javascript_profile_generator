@@ -9,6 +9,8 @@ The Team Profile Generator is a node js based profile generator that takes in me
 
 -[Licenses](#Licenses)
 
+-[Usage](#Usage)
+
 ## Licensing
 
 This app is open to public for use and suggestions for further development.     
@@ -33,7 +35,7 @@ No questions at this time.
 
 To use the app, simply run it on terminal with node js.
 
--[Usage](#Usage)
+
 
 ## GitHub Avatar
 
