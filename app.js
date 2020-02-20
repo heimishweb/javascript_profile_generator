@@ -71,7 +71,7 @@ appMenu();
 
 //Writes beginning of HTML and Manager profile with 
 function writeFileManager() {
-    fs.writeFile("main.html", `
+    fs.writeFile("team.html", `
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -108,7 +108,7 @@ function writeFileManager() {
 
 //Writes Engineer profile html code  
 function writeFileEngineer() {
-    fs.appendFile("main.html", `
+    fs.appendFile("team.html", `
     
           <div class="container">
               <h2 class="display-4">${engineer.name}</h2>
@@ -131,7 +131,7 @@ function writeFileEngineer() {
 }
 
 function writeFileIntern() {
-    fs.appendFile("main.html", `
+    fs.appendFile("team.html", `
     
     <div class="container">
         <h2 class="display-4">${intern.name}</h2>
@@ -154,7 +154,7 @@ function writeFileIntern() {
 }
 
 function writeEndHTML() {
-    fs.appendFile("main.html", `
+    fs.appendFile("team.html", `
     
     </body>
     </html>` , function (err) {
@@ -204,7 +204,6 @@ function createEngineer() {
             const engineerObject = answers;
             //testing constructor here below..
             engineer = new Engineer(engineerObject.engineerName, engineerObject.engineerId, engineerObject.engineerEmail, engineerObject.engineerOffice, engineerObject.engineerGithub)
-            console.log(engineerObject.engineerGithub)
 
             writeFileEngineer();
             if (answers.memberType === "engineer") {
