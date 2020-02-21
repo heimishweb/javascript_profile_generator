@@ -38,9 +38,10 @@ function appMenu() {
                 message: "What's the office number?"
             },
             {
-                type: "input",
+                type: "list",
                 name: "nextMemberType",
-                message: "What type of member would you like to add? (if done, press Enter)"
+                message: "What type of member would you like to add? (if done, press Enter)",
+                choices: ['Engineer', 'Intern', 'Exit program']
             }
         ])
             .then(function (answers) {
@@ -194,9 +195,10 @@ function createEngineer() {
             message: "What's the person's github username?"
         },
         {
-            type: "input",
-            name: "memberType",
-            message: "What type of member would you like to add? (if done, press Enter)"
+            type: "list",
+            name: "nextMemberType",
+            message: "What type of member would you like to add? (if done, press Enter)",
+            choices: ['Engineer', 'Intern', 'Exit program']
         }
     ])
         .then(function (answers) {
@@ -244,9 +246,10 @@ function createIntern() {
             message: "What's the intern's school?"
         },
         {
-            type: "input",
-            name: "memberType",
-            message: "What type of member would you like to add? (if done, press Enter)"
+            type: "list",
+            name: "nextMemberType",
+            message: "What type of member would you like to add? (if done, press Enter)",
+            choices: ['Engineer', 'Intern', 'Exit program']
         }
     ])
         .then(function (answers) {
