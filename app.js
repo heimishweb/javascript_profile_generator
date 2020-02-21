@@ -49,11 +49,11 @@ function appMenu() {
                 //testing constructor here below..
                 manager01 = new Manager(managerObject.managerName, managerObject.managerId, managerObject.managerEmail, managerObject.managerOffice)
                 writeFileManager();
-                if (answers.nextMemberType === "engineer") {
+                if (answers.nextMemberType === "Engineer") {
                     createEngineer();
 
                 }
-                else if (answers.nextMemberType === "intern") {
+                else if (answers.nextMemberType === "Intern") {
                     createIntern();
                 }
 
@@ -207,10 +207,10 @@ function createEngineer() {
             engineer = new Engineer(engineerObject.engineerName, engineerObject.engineerId, engineerObject.engineerEmail, engineerObject.engineerOffice, engineerObject.engineerGithub)
 
             writeFileEngineer();
-            if (answers.memberType === "engineer") {
+            if (answers.nextMemberType === "Engineer") {
                 createEngineer();
             }
-            else if (answers.memberType === "intern") {
+            else if (answers.nextMemberType === "Intern") {
                 createIntern();
             }
             else {
@@ -257,10 +257,10 @@ function createIntern() {
             //testing constructor here below..
             intern = new Intern(internObject.internName, internObject.internId, internObject.internEmail, internObject.internSchool)
             writeFileIntern();
-            if (answers.memberType === "engineer") {
+            if (answers.nextMemberType === "Engineer") {
                 createEngineer();
             }
-            else if (answers.memberType === "intern") {
+            else if (answers.nextMemberType === "Intern") {
                 createIntern();
             }
             else {
